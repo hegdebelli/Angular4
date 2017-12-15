@@ -1,6 +1,6 @@
 
 export class LabsService {
     getLabs(){
-        return ["Lab 11","Lab 12","Lab 13"];
+        return ["Lab 1","Lab 2","Lab 3"];
     }
 }
