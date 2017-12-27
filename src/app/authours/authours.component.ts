@@ -1,17 +1,25 @@
+import { Http } from '@angular/http';
 import { AuthoursService } from './../authours.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-authours',
+  selector: 'authours',
   templateUrl: './authours.component.html',
   styleUrls: ['./authours.component.css']
 })
-export class AuthoursComponent {
+export class AuthoursComponent implements OnInit {
 
-  auths;
+  auths: any[];
+  
+  constructor(private service:AuthoursService) {
 
-  constructor(service : AuthoursService) {
-    this.auths = service.getAuthors();
-   }
+  }
+
+  ngOnInit() {
+    
+    this.service.getAuthors().subscribe(data => {      
+      this.auths = data.json();  
+    });
+  }
 
 }

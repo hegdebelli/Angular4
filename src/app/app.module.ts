@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { AuthoursService } from './authours.service';
 import { LabsService } from './labs.service';
 import { LabsComponent } from './labs.component';
@@ -10,6 +11,7 @@ import { LabComponent } from './lab/lab.component';
 import { AuthoursComponent } from './authours/authours.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { AuthoursComponent } from './authours/authours.component';
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
+    
   ],
   providers: [
     LabsService,

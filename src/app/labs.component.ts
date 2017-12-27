@@ -1,5 +1,7 @@
+import { Http } from '@angular/http';
 import { LabsService } from './labs.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
     selector: 'labs',
@@ -11,11 +13,16 @@ import { Component } from '@angular/core';
     `
 })
 
-export class LabsComponent{
-    title = "Labs provided by Venki Company";
-    labs;
+export class LabsComponent implements OnInit {
 
-    constructor(service: LabsService){        
-        this.labs = service.getLabs();
+      title = "Labs provided by Venki Company";
+      constructor(private service: LabsService) { }
+      labs: any[]; 
+
+      ngOnInit() {
+        this.service.getLabs().subscribe(data =>{
+          this.labs = data.json();
+        });
+      }
+    
     }
-}
