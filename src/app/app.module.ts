@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LabComponent } from './lab/lab.component';
 import { AuthoursComponent } from './authours/authours.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -17,7 +18,8 @@ import { AuthoursComponent } from './authours/authours.component';
     AppComponent,
     LabsComponent,
     LabComponent,
-    AuthoursComponent
+    AuthoursComponent,
+    ProductComponent
     
   ],
   imports: [
