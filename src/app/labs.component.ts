@@ -1,5 +1,5 @@
+import { LabsService } from './Service/labs.service';
 import { Http } from '@angular/http';
-import { LabsService } from './labs.service';
 import { Component, OnInit } from '@angular/core';
 
 

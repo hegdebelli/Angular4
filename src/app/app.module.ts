@@ -1,7 +1,7 @@
-import { ProductService } from './product.service';
+import { ProductService } from './Service/product.service';
 import { HttpModule } from '@angular/http';
-import { AuthoursService } from './authours.service';
-import { LabsService } from './labs.service';
+import { AuthoursService } from './Service/authours.service';
+import { LabsService } from './Service/labs.service';
 import { LabsComponent } from './labs.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

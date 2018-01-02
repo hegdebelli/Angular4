@@ -1,5 +1,5 @@
+import { AuthoursService } from './../Service/authours.service';
 import { Http } from '@angular/http';
-import { AuthoursService } from './../authours.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
