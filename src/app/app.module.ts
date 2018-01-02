@@ -1,3 +1,4 @@
+import { ProductService } from './product.service';
 import { HttpModule } from '@angular/http';
 import { AuthoursService } from './authours.service';
 import { LabsService } from './labs.service';
@@ -29,7 +30,8 @@ import { ProductComponent } from './product/product.component';
   ],
   providers: [
     LabsService,
-    AuthoursService
+    AuthoursService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

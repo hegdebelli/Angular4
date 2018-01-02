@@ -1,3 +1,22 @@
-<p>
-  product works!
-</p>
+<h2> List Of Products </h2>
+
+<table id="customers">
+  <tr>
+    <th>Product Name</th>
+    <th>Product Code</th>
+    <th>Release Date</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Rating</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let pro of prod">
+      <td>{{pro.productName}} </td>
+      <td>{{pro.productCode}}</td>
+      <td>{{pro.releaseDate | date}}</td>
+      <td>{{pro.description}}</td>
+      <td>{{pro.price | currency}}</td>
+      <td>{{pro.starRating}}</td>
+    </tr>
+  </tbody>
+</table>
